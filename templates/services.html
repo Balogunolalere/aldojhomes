@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Aldoj Properties | Services
+Aldoj Home & Properties | Services
 {% endblock title %}
 
 {% block content %}
@@ -24,6 +24,24 @@ Aldoj Properties | Services
   </div>
 </div>
 
+<!-- section to put a video centered and responsive -->
+<div class="section">
+  <div class="container">
+    <div class="row" <div class="col-lg-12">
+      <div class="video-embed">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/u0dZmUZGNuU"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="section bg-light">
   <div class="container">
     <div class="row">
@@ -31,15 +49,21 @@ Aldoj Properties | Services
         <div class="box-feature mb-4">
           <span class="flaticon-house mb-4 d-block"></span>
           <h3 class="text-black mb-3 font-weight-bold">
-            Quality Properties
+            Real estate management
           </h3>
-          <p class="text-black-50">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.
-          </p>
-          <p><a href="#" class="learn-more">Read more</a></p>
+          <p><a href="/contact" class="learn-more">Read more</a></p>
         </div>
       </div>
+
+      <!-- LAND SALE   -->
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="box-feature mb-4">
+          <span class="flaticon-house-2 mb-4 d-block-3"></span>
+          <h3 class="text-black mb-3 font-weight-bold">Land sale</h3>
+          <p><a href="/contact" class="learn-more">Read more</a></p>
+        </div>
+      </div>
+
       <!-- <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
         <div class="box-feature mb-4">
           <span class="flaticon-house-2 mb-4 d-block-3"></span>
@@ -66,13 +90,9 @@ Aldoj Properties | Services
       </div> -->
       <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
         <div class="box-feature mb-4">
-          <span class="flaticon-house-3 mb-4 d-block-1"></span>
-          <h3 class="text-black mb-3 font-weight-bold">House for Sale</h3>
-          <p class="text-black-50">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.
-          </p>
-          <p><a href="#" class="learn-more">Read more</a></p>
+          <span class="flaticon-house-3 mb-4 d-block"></span>
+          <h3 class="text-black mb-3 font-weight-bold">Real estate investment</h3>
+          <p><a href="/contact" class="learn-more">Read more</a></p>
         </div>
       </div>
 
@@ -102,15 +122,11 @@ Aldoj Properties | Services
       </div> -->
       <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
         <div class="box-feature mb-4">
-          <span class="flaticon-house mb-4 d-block"></span>
+          <span class="flaticon-house-1 mb-4 d-block"></span>
           <h3 class="text-black mb-3 font-weight-bold">
-            Property for Sale
+            Building & Construction
           </h3>
-          <p class="text-black-50">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.
-          </p>
-          <p><a href="#" class="learn-more">Read more</a></p>
+          <p><a href="/contact" class="learn-more">Read more</a></p>
         </div>
       </div>
       <!-- <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
@@ -128,7 +144,8 @@ Aldoj Properties | Services
   </div>
 </div>
 
-<div class="section sec-testimonials">
+<!-- section for testimonies -->
+<!-- <div class="section sec-testimonials">
   <div class="container">
     <div class="row mb-5 align-items-center">
       <div class="col-md-6">
@@ -244,5 +261,5 @@ Aldoj Properties | Services
       </div>
     </div>
   </div>
-</div>
+</div> -->
 {% endblock content %}

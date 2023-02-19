@@ -1,12 +1,23 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Form, status
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
+from pydantic import EmailStr
+import os
+import smtplib
+from email.message import EmailMessage
+from dotenv import load_dotenv
 
+load_dotenv()
 
-app = FastAPI()
+# disable the docs
+app = FastAPI(docs_url=None, redoc_url=None)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
+
+
+
 
 @app.get("/")
 async def home(request: Request):
@@ -28,10 +39,33 @@ async def about(request: Request):
 async def properties(request: Request):
     return templates.TemplateResponse("properties.html", {"request": request})
 
-# admin panel to add images and video media, it should save and be loaded from a json file
-# @app.get("/admin")
-# async def admin(request: Request):
-#     return templates.TemplateResponse("admin.html", {"request": request})
+@app.post("/sendmail")
+async def contact(request: Request, full_name: str = Form(...), email: EmailStr = Form(...), subject: str = Form(...), message: str = Form(...)):
+    sender_email = os.getenv("HOST_EMAIL")
+    receiver_email  = os.getenv("HOST_EMAIL")
+    smtp_server = 'mail.privateemail.com'
+    port = 465
+    login = sender_email
+    password = os.getenv("HOST_PASSWORD")
+    messagex = EmailMessage()
+    messagex["Subject"] = "Contact Form"
+    messagex["From"] = f"Aldoj Homes and Properties <{sender_email}>"
+    messagex["To"] = receiver_email
+    content = f"""
+    \n
+    Full Name: {full_name} \n
+    Email: {email} \n
+    Subject: {subject} \n
+    Message: {message} \n
+    """.format(full_name=full_name, email=email, subject=subject, message=message)
+    messagex.set_content(content)
+    server = smtplib.SMTP_SSL(smtp_server, port)
+    server.login(login, password)
+    server.send_message(messagex)
+    server.quit()
+    resp = RedirectResponse(url="/contact", status_code=status.HTTP_302_FOUND)
+    return resp
+
 
 @app.middleware("http")
 async def fix_mime_type(request: Request, call_next):

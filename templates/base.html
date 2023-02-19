@@ -54,6 +54,15 @@
         {% endblock title %}
     </title>
 
+    <!-- logo-text should not be visible in mobile -->
+    <style>
+        @media (max-width: 768px) {
+            .logo-text {
+                display: none;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -70,7 +79,11 @@
         <div class="container">
             <div class="menu-bg-wrap">
                 <div class="site-navigation">
-                    <a href="/" class="logo m-0 float-start">Aldoj Properties</a>
+                    <a href="/" class="logo">
+                        <img src="static/logo.png" alt="logo" class="logo" height="50px" width="50px" />
+
+                        <span class="logo-text">Aldoj Homes & Properties</span>
+                    </a>
 
                     <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
                         <li class="active"><a href="/">Home</a></li>
@@ -115,69 +128,48 @@
                 <div class="col-lg-4">
                     <div class="widget">
                         <h3>Contact</h3>
-                        <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+                        <address>Suite 8, Living plaza, 406, Lagos/Abeokuta Express Way, Awori bus/stop Lagos State, Nigeria</address>
                         <ul class="list-unstyled links">
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                            <li><a href="tel://11234567890">+2348038268669</a></li>
+                            <!-- <li><a href="tel://11234567890">+1(123)-456-7890</a></li> -->
                             <li>
-                                <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                                <a href="mailto:info@aldojamazingconsult.com">info@aldojamazingconsult.com</a>
                             </li>
                         </ul>
                     </div>
                     <!-- /.widget -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <div class="widget">
-                        <!-- <h3>Sources</h3> -->
-                        <!-- <ul class="list-unstyled float-start links">
-                            <li><a href="/about">About us</a></li>
-                            <li><a href="/services">Services</a></li>
-                            <li><a href="#">Vision</a></li>
-                            <li><a href="#">Mission</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
-                        </ul>
-                        <ul class="list-unstyled float-start links">
-                            <li><a href="#">Partners</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Creative</a></li>
-                        </ul> -->
-                    </div>
-                    <!-- /.widget -->
-                </div>
+
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="widget">
                         <h3>Links</h3>
                         <ul class="list-unstyled links">
-                            <li><a href="#">Our Vision</a></li>
+                            <!-- <li><a href="#">Our Vision</a></li> -->
                             <li><a href="/about">About us</a></li>
                             <li><a href="/contact">Contact us</a></li>
                         </ul>
 
                         <ul class="list-unstyled social">
                             <li>
-                                <a href="#"><span class="icon-instagram"></span></a>
+                                <a href="https://www.instagram.com/aldojamazingconsult/"><span class="icon-instagram"></span></a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-twitter"></span></a>
+                                <a href="https://twitter.com/AldojAmazing"><span class="icon-twitter"></span></a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-facebook"></span></a>
+                                <a href="https://web.facebook.com/ALDOJ-Amazing-Consult-294294847854040/?__tn__=%2Cd%2CP-R&eid=ARCxb6KnNtoVPNvNklBmhV9kJGMr_YkpPdI8NzNtCbEYPONiy5IbyKD_siq7ruF0yDQmdquQeoecyKjt"><span class="icon-facebook"></span></a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon-linkedin"></span></a>
+                                <a href="https://www.linkedin.com/company/aldojamazingconsult/"><span class="icon-linkedin"></span></a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#"><span class="icon-pinterest"></span></a>
                             </li>
                             <li>
                                 <a href="#"><span class="icon-dribbble"></span></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <!-- /.widget -->
@@ -200,8 +192,11 @@
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
-                        . All Rights Reserved. &mdash; Designed with love by
-                        <a href="https://twitter.com/_doombuggy" target="_blank">Doom Buggy</a>
+                        . All Rights Reserved. &mdash; Redesigned with love by
+                        <a href="https://twitter.com/_doombuggy" target="_blank">
+                            <!-- teddy bear emoji -->
+                            🐻
+                        </a>
                         <!-- License information: https://untree.co/license/ -->
                     </p>
                     <!-- <div>

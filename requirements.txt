@@ -3,4 +3,5 @@ jinja2
 python-multipart
 email-validator
 python-dotenv
-cloudinary
+uvicorn
+pydantic[email]
